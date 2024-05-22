@@ -1,0 +1,11 @@
+.service-card button {
+    background: linear-gradient(45deg, #ff007a, #590fb7);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* <button>Learn More</button> */
