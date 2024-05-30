@@ -326,6 +326,7 @@ main {
 .contact-section{
     display: flex;
     flex-direction: row;
+    height: 90vh;
 }
 
 .contact-section div{
