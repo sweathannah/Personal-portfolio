@@ -21,7 +21,11 @@ header, a {
 }
 
 header {
-    background: linear-gradient(#221323, #948186, #c515b8);
+    background-image: url(Assets/images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     padding: 3vw 2.5rem;
     height: 100vh;
@@ -257,26 +261,27 @@ main {
 }
 
 .projects-section {
-    padding: 0 0  0 2.5rem;
+    padding: 0 0 0 2.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
 }
 
-.projects-section > div:first-of-type{
+.projects-section > div:first-of-type {
     width: 50%;
     padding-top: 5.87rem;
 }
 
-.projects-section p{
+.projects-section p {
     font-size: 60px;
     line-height: 70px;
     text-align: left;
     width: 600px;
 }
 
-.projects-section button{
+.projects-section button,
+.blog-intro-content a {
     width: 170px;
     height: 60px;
     border-radius: 30px;
@@ -285,48 +290,53 @@ main {
     background: none;
     background-color: #F9B5FF;
     color: #210B26;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.project-grid{
+.projects-section button:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.project-grid {
     height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.project-grid img, .project-grid a{
+.project-grid img,
+.project-grid a {
     width: 300px;
+    transition: transform 0.3s; /* Added transition */
 }
 
-.project-grid img:nth-of-type(2), .project-grid a:nth-of-type(2){
+.project-grid img:hover,
+.project-grid a:hover {
+    transform: scale(1.1); /* Added scale effect on hover */
+}
+
+.project-grid img:nth-of-type(2),
+.project-grid a:nth-of-type(2) {
     margin: 60px 0 30px 30px;
 }
 
-.project-grid img:nth-of-type(3), .project-grid a:nth-of-type(3){
+.project-grid img:nth-of-type(3),
+.project-grid a:nth-of-type(3) {
     margin: 0 30px 0 40px;
 }
 
-.project-grid img:last-of-type, .project-grid a:last-of-type{
+.project-grid img:last-of-type,
+.project-grid a:last-of-type {
     margin-top: 20px;
 }
 
-.project-item {
-    transition: transform 0.3s;
-}
-
-.project-item:hover {
-    transform: scale(1.05);
-}
-
-.project-item a {
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
 
 .contact-section{
     display: flex;
     flex-direction: row;
     height: 90vh;
+    gap: 200px;
 }
 
 .contact-section div{
@@ -335,11 +345,65 @@ main {
     width: 50%;
 }
 
-.contact-section a, .contact-section button{
-    width: 300px;
-    height: 70px;
-    font-size: 28px;
-    font-weight: 800;
+.contact-section div:last-of-type{
+    margin-top: 180px;
 }
 
+.contact-section a, .contact-section button{
+    font-size: 20px;
+    font-weight: 800;
+    
+}
 
+.blog-section {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(88, 8, 83);
+    padding: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    border-top: 30px  solid rgba(88, 8, 83, 0.781);
+    border-bottom: 30px  solid rgba(88, 8, 83, 0.781);
+    
+}
+
+.blog-intro-content {
+    margin: auto;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.blog-intro h2 {
+    font-size: 2.5rem;
+    color: rgb(88, 8, 83);
+}
+
+.blog-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgb(51, 51, 51);
+    margin: 1px 0;
+}
+
+.blog-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(88, 8, 83);
+    border: 2px solid rgb(88, 8, 83);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-button:hover {
+    background-color: #580853;
+    color: #efefef;
+}
+
+footer{
+    background-color: #c515b8;
+}
+
+.services-section,.contact-section,footer{
+    background-color: #6F3891;
+}
